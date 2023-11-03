@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classroom</title>
+    <link rel="shortcut icon" href="https://www.gstatic.com/classroom/logo_square_rounded.svg" type="image/x-icon">
+    <style type="text/css">
+      .parent {
+        border: 1px solid #9C27B0;
+        height: 250px;
+        position: relative;
+        width: 250px;
+      }
+
+      .child {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 50vw;
+        height: 10vh;
+        border-radius: 25px;
+        background-color: #1a2023ff;
+        color: white;
+        border: solid;
+        border-color: #0284d4ff;
+        font-size: 150%;
+        font-weight: bold;
+      }
+      body {
+        background-color: #0e1213ff;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      addEventListener("keyup", function (event) {
+        if (event.keyCode == 13) {
+          start();
+        }
+      });
+
+      function start() {
+        const site = document.getElementById("domain").value;
+        var win = window.open();
+        var url = `https://${site}`;
+        var iframe = win.document.createElement("iframe");
+        iframe.style.position = "fixed";
+        iframe.style.top = "0";
+        iframe.style.left = "0";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+        location.replace("https://nasa.gov");
+      }
+    </script>
+
+    <div class="parrent">
+      <input class="child" id="domain" type="text" placeholder="Website" />
+    </div>
+  </body>
+</html>

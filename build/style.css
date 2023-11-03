@@ -1,0 +1,26 @@
+.parent {
+  border: 1px solid #9C27B0;
+  height: 250px;
+  position: relative;
+  width: 250px;
+}
+
+.child {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 50vw;
+  height: 10vh;
+  border-radius: 25px;
+  background-color: #1a2023ff;
+  color: white;
+  border: solid;
+  border-color: #0284d4ff;
+  font-size: 150%;
+  font-weight: bold;
+}
+body {
+  background-color: #0e1213ff;
+}
